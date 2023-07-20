@@ -46,7 +46,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-pixys
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
@@ -69,4 +69,4 @@ $(call inherit-product, device/oneplus/sm8350-common/common.mk)
 $(call inherit-product, vendor/realme/lunaa/lunaa-vendor.mk)
 
 # Camera
-$(call inherit-product-if-exists, vendor/realme/camera/realmecamera.mk)
+#$(call inherit-product-if-exists, vendor/realme/camera/realmecamera.mk)
