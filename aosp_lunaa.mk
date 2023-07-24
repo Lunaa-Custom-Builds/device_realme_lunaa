@@ -5,21 +5,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from lunaa device
 $(call inherit-product, device/realme/lunaa/device.mk)
 
-# Inherit some common Pixys Stuff
-$(call inherit-product, vendor/pixys/config/common_full_phone.mk)
+# Inherit some common aosp Stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Additional stuff for this product.
-TARGET_INCLUDE_PIXEL_CHARGER := true
-TARGET_GAPPS_ARCH := arm64
+# Official-ify
+ELIXIR_MAINTAINER := X-R-P
+ELIXIR_BUILD_TYPE := OFFICIAL
+IS_PHONE := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-PIXYS_BUILD_TYPE := X-OWN
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 #Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := pixys_lunaa
+PRODUCT_NAME := aosp_lunaa
 PRODUCT_DEVICE := lunaa
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
